@@ -1,4 +1,4 @@
-# studious-octo-pancake
+# simple-cypher
 A simple cypher/decypher program
 
 CURRENT VER
