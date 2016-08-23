@@ -7,6 +7,7 @@ CURRENT VER
 - Opening menu for choosing encypher or decypher
 
 COMING SOON
+- Multi-line i/o
 - File i/o for both cypher and decypher via command line
 - Seed based cyphers, allowing for unique keys between users. Including using files as keys.
 - E-mail/Web integration
