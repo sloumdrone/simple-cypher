@@ -1,0 +1,63 @@
+import string
+
+"""take input"""
+input2 = raw_input("Text to encode?")
+counter2 = 0
+
+"""Create dictionary lookups"""
+chars = string.printable
+charlist = []
+dict02 = {}
+dict03 = {}
+
+for x in chars:
+    charlist.append(x)
+
+for y, z in enumerate(charlist):
+    dict02.update({y: z})
+    dict03.update({y: z})
+
+dict01=dict((value,key) for key,value in dict02.iteritems())
+
+for key in dict02.iterkeys():
+    if key < 100:
+        dict02[key+100] = dict02.pop(key)
+    else:
+        break
+
+
+
+"""Convert the input into regular text"""
+
+def stringout ():
+    conversionstep1 = list(input2)
+    conversionstep2 = []
+    conversionstep3 = []
+    conversionstep4 = []
+
+    for x, y in enumerate(conversionstep1):
+            conversionstep2.append(dict01[str(conversionstep1[x])])
+    
+    conversionstep2.reverse()
+    
+    for x, y in enumerate(conversionstep2):
+        try:
+            counter = conversionstep2[x] - conversionstep2[x+1]
+            if counter < 0:
+                counter += 100
+                conversionstep3.append(counter)
+            else:
+                conversionstep3.append(counter)
+        except IndexError:
+            pass
+        continue
+
+    counter = 0
+    
+
+    print conversionstep2
+    print conversionstep3
+    print 'lineout'
+
+stringout()
+
