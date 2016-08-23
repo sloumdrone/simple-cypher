@@ -26,8 +26,7 @@ for key in dict02.iterkeys():
         break
 
 
-
-"""Convert the input into regular text"""
+"""Convert the input into regular text, from cypher"""
 
 def stringout ():
     conversionstep1 = list(input2)
@@ -35,29 +34,32 @@ def stringout ():
     conversionstep3 = []
     conversionstep4 = []
 
+    """get numbers from letters"""
     for x, y in enumerate(conversionstep1):
             conversionstep2.append(dict01[str(conversionstep1[x])])
-    
-    conversionstep2.reverse()
-    
-    for x, y in enumerate(conversionstep2):
-        try:
-            counter = conversionstep2[x] - conversionstep2[x+1]
-            if counter < 0:
-                counter += 100
-                conversionstep3.append(counter)
-            else:
-                conversionstep3.append(counter)
-        except IndexError:
-            pass
-        continue
 
+    print 'reference:'
+    print conversionstep2
+
+    
+    """convert numbers to decyphered numbers"""
+    for x, y in enumerate(conversionstep2):
+        if x < 1:
+            conversionstep3.append(conversionstep2[x])
+        else:
+            try:
+                counter2 =  conversionstep2[x] - conversionstep3[(x-1)]
+                if counter2 < 0:
+                    counter2 += 100
+                conversionstep3.append(counter2)
+            except IndexError:
+                pass
+            continue
     counter = 0
     
 
-    print conversionstep2
+    print 'output for conversion:'
     print conversionstep3
     print 'lineout'
 
 stringout()
-
