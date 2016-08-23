@@ -2,10 +2,11 @@
 A simple cypher/decypher program
 
 CURRENT VER
-- Manual input w/ cypher output (console for both)
+- Manual i/o of single line text > cypher
+- Manual i/o of single line cypher > text
+- Opening menu for choosing encypher or decypher
 
 COMING SOON
-- Manual cypher input w/ de-cypher output (console)
-- File i/o for both cypher and decypher
+- File i/o for both cypher and decypher via command line
+- Seed based cyphers, allowing for unique keys between users. Including using files as keys.
 - E-mail/Web integration
-- Generative cypher library (seed based), rather than hard coded
