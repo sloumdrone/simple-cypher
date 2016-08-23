@@ -38,9 +38,6 @@ def stringout ():
     for x, y in enumerate(conversionstep1):
             conversionstep2.append(dict01[str(conversionstep1[x])])
 
-    print 'reference:'
-    print conversionstep2
-
     
     """convert numbers to decyphered numbers"""
     for x, y in enumerate(conversionstep2):
@@ -56,10 +53,13 @@ def stringout ():
                 pass
             continue
     counter = 0
-    
 
-    print 'output for conversion:'
-    print conversionstep3
-    print 'lineout'
+    for x, y in enumerate(conversionstep3):
+        if y > 99:
+            conversionstep4.append(dict02[conversionstep3[x]])
+        else:
+            conversionstep4.append(dict03[conversionstep3[x]])
+    print ''.join(conversionstep4)
+
 
 stringout()
